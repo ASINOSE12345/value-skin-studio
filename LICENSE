@@ -1,0 +1,21 @@
+Copyright (c) 2024 JB Coding IoT. Todos los derechos reservados.
+
+EL SOFTWARE SE ENTREGA "TAL CUAL", CON EL FIN EXCLUSIVO DE SU LICENCIAMIENTO 
+COMO SERVICIO (SaaS) MULTI-TENANT.
+
+1. PROPIEDAD INTELECTUAL Y AUTORÍA
+El presente código fuente, su arquitectura, componentes del Frontend, Backend, 
+Base de Datos, integraciones, y cualquier modificación derivada son propiedad 
+absoluta y exclusiva de "JB Coding IoT" (en adelante "El Autor" o "La Software Factory").
+
+2. RESTRICCIONES DE USO Y DISTRIBUCIÓN
+La posesión de este código fuente no otorga derechos de reventa, sublicenciamiento, 
+distribución gratuita ni comercial de los repositorios sin el consentimiento expreso y por escrito 
+de JB Coding IoT. Cualquier clonación, bifurcación (fork) o copia del código fuente 
+debe ser solicitada y aprobada por JB Coding IoT.
+
+3. MODELO DE NEGOCIO (SaaS MULTI-TENANT)
+Este software ha sido diseñado con una arquitectura Multi-Tenant para operar como 
+SaaS (Software como Servicio). Su instalación y puesta en producción comercial 
+dando servicio a terceros debe estar mediada por un contrato de licenciamiento 
+con JB Coding IoT.
