@@ -59,6 +59,7 @@ const bannersRoutes = require('./routes/v1/banners');
 const servicesRoutes = require('./routes/v1/services');
 const promotionsRoutes = require('./routes/v1/promotions');
 const contentRoutes = require('./routes/v1/content');
+const marketingRoutes = require('./routes/v1/marketing');
 
 // Rutas de autenticacion
 const authRoutes = require('./routes/v1/auth');
@@ -77,6 +78,7 @@ const adminInvoicesRoutes = require('./routes/v1/admin/invoices');
 const adminAvailabilityRoutes = require('./routes/v1/admin/availability');
 const adminSettingsRoutes = require('./routes/v1/admin/settings');
 const adminWhatsappRoutes = require('./routes/v1/admin/whatsapp');
+const adminMarketingRoutes = require('./routes/v1/admin/marketing');
 
 // Montar rutas v1 publicas
 v1Router.use('/config', configRoutes);
@@ -84,6 +86,7 @@ v1Router.use('/banners', bannersRoutes);
 v1Router.use('/services', servicesRoutes);
 v1Router.use('/promotions', promotionsRoutes);
 v1Router.use('/content', contentRoutes);
+v1Router.use('/marketing', marketingRoutes);
 
 // Montar rutas v1 auth
 v1Router.use('/auth', authLimiter, authRoutes);
@@ -102,6 +105,7 @@ v1Router.use('/admin/invoices', adminInvoicesRoutes);
 v1Router.use('/admin/availability', adminAvailabilityRoutes);
 v1Router.use('/admin/settings', adminSettingsRoutes);
 v1Router.use('/admin/whatsapp', adminWhatsappRoutes);
+v1Router.use('/admin/marketing', adminMarketingRoutes);
 
 // Montar router v1
 app.use('/api/v1', v1Router);

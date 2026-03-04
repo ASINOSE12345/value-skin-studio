@@ -2,14 +2,14 @@
 
 const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : '/api';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     // Header sticky y navegación
     const header = document.getElementById('header');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav__link');
-    
+
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 100) {
             header.classList.add('scrolled');
@@ -17,24 +17,24 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('scrolled');
         }
     });
-    
+
     // Toggle menú móvil
     if (navToggle) {
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
     }
-    
+
     // Cerrar menú al hacer click en un link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
         });
     });
-    
+
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -46,10 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Smooth scroll para botones con data-scroll
     document.querySelectorAll('[data-scroll]').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const targetId = this.getAttribute('data-scroll');
             const target = document.getElementById(targetId);
             if (target) {
@@ -61,11 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Cards clickeables
     const clickableCards = document.querySelectorAll('.card--clickable');
     clickableCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function () {
             const scrollTo = this.getAttribute('data-scroll');
             if (scrollTo) {
                 const target = document.getElementById(scrollTo);
@@ -79,21 +79,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Modal functionality
     const modal = document.getElementById('modal');
     const modalOverlay = document.getElementById('modalOverlay');
     const modalClose = document.getElementById('modalClose');
     const modalBody = document.getElementById('modalBody');
-    
+
     // Abrir modal
     document.querySelectorAll('[data-modal]').forEach(trigger => {
-        trigger.addEventListener('click', function() {
+        trigger.addEventListener('click', function () {
             const modalType = this.getAttribute('data-modal');
             openModal(modalType);
         });
     });
-    
+
     // Cerrar modal
     if (modalClose) {
         modalClose.addEventListener('click', closeModal);
@@ -101,34 +101,34 @@ document.addEventListener('DOMContentLoaded', function() {
     if (modalOverlay) {
         modalOverlay.addEventListener('click', closeModal);
     }
-    
+
     function openModal(type) {
         let content = '';
-        
+
         if (type === 'contacto' || type === 'contacto-empresa' || type === 'contacto-escuela') {
             content = getContactFormHTML(type);
         }
-        
+
         modalBody.innerHTML = content;
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
-        
+
         // Inicializar formulario del modal
         const form = document.getElementById('modalContactForm');
         if (form) {
             form.addEventListener('submit', handleModalFormSubmit);
         }
     }
-    
+
     function closeModal() {
         modal.classList.remove('active');
         document.body.style.overflow = '';
     }
-    
+
     function getContactFormHTML(type) {
         let title = 'Contactanos';
         let defaultType = 'cliente';
-        
+
         if (type === 'contacto-empresa') {
             title = 'Consulta Corporativa';
             defaultType = 'empresa';
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title = 'Inscripción Escuela';
             defaultType = 'escuela';
         }
-        
+
         return `
             <h2>${title}</h2>
             <form id="modalContactForm" class="contact-form">
@@ -162,19 +162,19 @@ document.addEventListener('DOMContentLoaded', function() {
             </form>
         `;
     }
-    
+
     async function handleModalFormSubmit(e) {
         e.preventDefault();
-        
+
         const form = e.target;
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
         const messageDiv = document.getElementById('modalFormMessage');
         const submitBtn = form.querySelector('button[type="submit"]');
-        
+
         submitBtn.disabled = true;
         submitBtn.textContent = 'Enviando...';
-        
+
         try {
             const response = await fetch(`${API_URL}/contact`, {
                 method: 'POST',
@@ -183,9 +183,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: JSON.stringify(data)
             });
-            
+
             const result = await response.json();
-            
+
             if (result.success) {
                 messageDiv.innerHTML = `
                     <div style="padding: 15px; background: #d4edda; color: #155724; border-radius: 6px;">
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
                 form.reset();
-                
+
                 setTimeout(() => {
                     closeModal();
                 }, 2000);
@@ -211,21 +211,21 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.textContent = 'Enviar Consulta';
         }
     }
-    
+
     // Formulario de contacto principal
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData);
             const messageDiv = document.getElementById('formMessage');
             const submitBtn = contactForm.querySelector('button[type="submit"]');
-            
+
             submitBtn.disabled = true;
             submitBtn.textContent = 'Enviando...';
-            
+
             try {
                 const response = await fetch(`${API_URL}/contact`, {
                     method: 'POST',
@@ -234,9 +234,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     body: JSON.stringify(data)
                 });
-                
+
                 const result = await response.json();
-                
+
                 if (result.success) {
                     messageDiv.innerHTML = `
                         <div style="padding: 20px; background: #d4edda; color: #155724; border-radius: 8px; margin-top: 20px;">
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     `;
                     contactForm.reset();
-                    
+
                     setTimeout(() => {
                         messageDiv.innerHTML = '';
                     }, 5000);
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     console.log('%c🌿 Value Skin Studio', 'font-size: 24px; color: #2C5F4F; font-weight: bold;');
     console.log('%cBienestar Profesional en Posadas', 'font-size: 14px; color: #8C8C88;');
 });
@@ -315,7 +315,7 @@ async function loadAllBanners() {
             banners.forEach(banner => {
                 if (!banner.active || !banner.image_url) return;
 
-                switch(banner.section) {
+                switch (banner.section) {
                     case 'hero':
                         const heroSection = document.querySelector('.hero');
                         if (heroSection) {
@@ -363,3 +363,107 @@ async function loadAllBanners() {
 
 // Cargar todos los banners al iniciar
 document.addEventListener('DOMContentLoaded', loadAllBanners);
+
+// =====================================================
+// LEAD MAGNETS (MARKETING)
+// =====================================================
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch(`${API_URL}/v1/marketing/campaigns/active`);
+        if (!response.ok) return; // Si no hay ruta o da error, ignorar (no romper la web)
+
+        const result = await response.json();
+
+        if (result.success && result.data) {
+            initLeadMagnet(result.data);
+        }
+    } catch (e) {
+        console.log('Marketing Module no disponible o sin campañas activas');
+    }
+});
+
+function initLeadMagnet(campaign) {
+    // Verificar si el usuario ya vió o cerró el magnet en esta sesión
+    if (sessionStorage.getItem('leadMagnetSeen')) return;
+
+    const modal = document.getElementById('leadMagnetModal');
+    const modalBody = document.getElementById('leadMagnetBody');
+    const overlay = document.getElementById('leadMagnetOverlay');
+    const closeBtn = document.getElementById('leadMagnetClose');
+
+    if (!modal || !modalBody) return;
+
+    // Inyectar HTML de la campaña
+    modalBody.innerHTML = `
+        <h2>${campaign.title}</h2>
+        <p class="subtitle--magnet">${campaign.subtitle}</p>
+        
+        <form class="contact-form" id="leadMagnetForm">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Tu Nombre" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Tu Email" required>
+            </div>
+            <input type="hidden" name="campaign_id" value="${campaign.id}">
+            <button type="submit" class="btn btn--primary btn--full magnet-btn">${campaign.button_text || 'Obtener Beneficio'}</button>
+        </form>
+        
+        <div id="magnetReward" class="magnet-reward"></div>
+    `;
+
+    // Mostrar modal con retraso (ej. 3 segundos o al hacer scroll)
+    setTimeout(() => {
+        modal.classList.add('active');
+        sessionStorage.setItem('leadMagnetSeen', 'true');
+    }, 3500);
+
+    // Cerrar modal
+    const closeMagnet = () => modal.classList.remove('active');
+    closeBtn.addEventListener('click', closeMagnet);
+    overlay.addEventListener('click', closeMagnet);
+
+    // Manejar el submit del Lead Magnet
+    const form = document.getElementById('leadMagnetForm');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        const btn = form.querySelector('.magnet-btn');
+        const rewardDiv = document.getElementById('magnetReward');
+
+        btn.disabled = true;
+        btn.textContent = 'Procesando...';
+
+        try {
+            const res = await fetch(`${API_URL}/v1/marketing/leads`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            const result = await res.json();
+
+            if (result.success) {
+                form.style.display = 'none'; // ocultar form
+                rewardDiv.classList.add('active');
+
+                if (campaign.magnet_type === 'discount') {
+                    rewardDiv.innerHTML = `¡Gracias ${data.name}! Tu código es:<br><br><span style="font-size:24px; color:var(--color-terracota)">${campaign.magnet_resource}</span><br><br>Saca captura o dile esto a la recepcionista.`;
+                } else {
+                    // ebook o pdf
+                    rewardDiv.innerHTML = `¡Gracias ${data.name}! <br><a href="${campaign.magnet_resource}" target="_blank" style="color:var(--color-verde-selva); text-decoration:underline;">Click aquí para Descargar</a>`;
+                }
+            } else {
+                alert('Hubo un error, completa todos los campos.');
+                btn.disabled = false;
+                btn.textContent = campaign.button_text || 'Obtener';
+            }
+        } catch (error) {
+            console.error('Error enviando lead:', error);
+            btn.disabled = false;
+            btn.textContent = campaign.button_text || 'Obtener';
+        }
+    });
+}

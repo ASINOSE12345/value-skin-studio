@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Value Skin Studio - Bienestar Profesional en Posadas</title>
-    <meta name="description" content="Masajes terapéuticos y estética de bienestar en Posadas, Misiones. Programas personalizados, spa móvil para hoteles y bienestar corporativo.">
+    <meta name="description"
+        content="Masajes terapéuticos y estética de bienestar en Posadas, Misiones. Programas personalizados, spa móvil para hoteles y bienestar corporativo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header / Navegación -->
     <header class="header" id="header">
@@ -20,7 +26,7 @@
                         <span class="logo-text">Value Skin Studio</span>
                     </a>
                 </div>
-                
+
                 <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -42,28 +48,37 @@
     <main>
         <!-- Hero Section -->
         <section class="hero" id="home">
+            <video autoplay loop muted playsinline class="hero__video">
+                <source src="https://cdn.coverr.co/videos/coverr-woman-washing-her-face-with-water-9065/1080p.mp4"
+                    type="video/mp4">
+            </video>
             <div class="hero__overlay"></div>
             <div class="hero__content">
                 <h1 class="hero__title">Bienestar Profesional en Posadas</h1>
                 <p class="hero__subtitle">Masajes terapéuticos | Estética avanzada | Programas personalizados</p>
-                
+
                 <div class="hero__buttons">
                     <button class="btn btn--hero" data-scroll="para-ti">
                         <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M10 11C12.2091 11 14 9.20914 14 7C14 4.79086 12.2091 3 10 3C7.79086 3 6 4.79086 6 7C6 9.20914 7.79086 11 10 11Z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M3 17C3 14.2386 6.13401 12 10 12C13.866 12 17 14.2386 17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path
+                                d="M10 11C12.2091 11 14 9.20914 14 7C14 4.79086 12.2091 3 10 3C7.79086 3 6 4.79086 6 7C6 9.20914 7.79086 11 10 11Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M3 17C3 14.2386 6.13401 12 10 12C13.866 12 17 14.2386 17 17" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
                         </svg>
                         Soy Cliente
                     </button>
                     <button class="btn btn--hero" data-scroll="hoteles">
                         <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M3 17V8L10 3L17 8V17H12V12H8V17H3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M3 17V8L10 3L17 8V17H12V12H8V17H3Z" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
                         </svg>
                         Tengo un Hotel
                     </button>
                     <button class="btn btn--hero" data-scroll="empresas">
                         <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M8 6H16M8 10H16M8 14H16M4 6H4.01M4 10H4.01M4 14H4.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 6H16M8 10H16M8 14H16M4 6H4.01M4 10H4.01M4 14H4.01" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
                         </svg>
                         Soy Empresa
                     </button>
@@ -71,45 +86,52 @@
 
                 <div class="scroll-indicator">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </div>
             </div>
         </section>
 
         <!-- Propuesta de Valor -->
-        <section class="features section">
+        <section class="features section" data-aos="fade-up">
             <div class="container">
                 <h2 class="section__title">¿Por qué elegirnos?</h2>
-                
+
                 <div class="features__grid">
-                    <div class="feature">
+                    <div class="feature" data-aos="fade-up" data-aos-delay="100">
                         <div class="feature__icon">
                             <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                                <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2"/>
-                                <path d="M32 20V32L40 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2" />
+                                <path d="M32 20V32L40 40" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
                             </svg>
                         </div>
                         <h3 class="feature__title">Experiencia Real</h3>
-                        <p class="feature__text">+10 años de trayectoria profesional. Protocolos científicamente respaldados.</p>
+                        <p class="feature__text">+10 años de trayectoria profesional. Protocolos científicamente
+                            respaldados.</p>
                     </div>
 
-                    <div class="feature">
+                    <div class="feature" data-aos="fade-up" data-aos-delay="200">
                         <div class="feature__icon">
                             <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                                <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2"/>
-                                <path d="M22 32L28 38L42 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2" />
+                                <path d="M22 32L28 38L42 24" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
                         <h3 class="feature__title">Tecnología de Avanzada</h3>
-                        <p class="feature__text">Equipamiento de última generación. Resultados medibles y comprobables.</p>
+                        <p class="feature__text">Equipamiento de última generación. Resultados medibles y comprobables.
+                        </p>
                     </div>
 
-                    <div class="feature">
+                    <div class="feature" data-aos="fade-up" data-aos-delay="300">
                         <div class="feature__icon">
                             <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                                <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2"/>
-                                <path d="M32 24C27.5817 24 24 27.5817 24 32C24 36.4183 27.5817 40 32 40C36.4183 40 40 36.4183 40 32C40 27.5817 36.4183 24 32 24Z" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2" />
+                                <path
+                                    d="M32 24C27.5817 24 24 27.5817 24 32C24 36.4183 27.5817 40 32 40C36.4183 40 40 36.4183 40 32C40 27.5817 36.4183 24 32 24Z"
+                                    stroke="currentColor" stroke-width="2" />
                             </svg>
                         </div>
                         <h3 class="feature__title">Atención Personalizada</h3>
@@ -120,47 +142,58 @@
         </section>
 
         <!-- Selector de Audiencia -->
-        <section class="audience-selector section section--white">
+        <section class="audience-selector section section--white" data-aos="fade-up">
             <div class="container">
                 <h2 class="section__title">¿Qué estás buscando?</h2>
-                
+
                 <div class="cards-grid">
-                    <article class="card card--clickable" data-scroll="para-ti">
-                        <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80');">
+                    <article class="card card--clickable" data-scroll="para-ti" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card__image"
+                            style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80');">
                             <div class="card__overlay"></div>
                         </div>
                         <div class="card__content">
                             <svg class="card__icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M24 26C28.4183 26 32 22.4183 32 18C32 13.5817 28.4183 10 24 10C19.5817 10 16 13.5817 16 18C16 22.4183 19.5817 26 24 26Z" stroke="white" stroke-width="2"/>
-                                <path d="M8 38C8 32.4772 15.1634 28 24 28C32.8366 28 40 32.4772 40 38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                <path
+                                    d="M24 26C28.4183 26 32 22.4183 32 18C32 13.5817 28.4183 10 24 10C19.5817 10 16 13.5817 16 18C16 22.4183 19.5817 26 24 26Z"
+                                    stroke="white" stroke-width="2" />
+                                <path d="M8 38C8 32.4772 15.1634 28 24 28C32.8366 28 40 32.4772 40 38" stroke="white"
+                                    stroke-width="2" stroke-linecap="round" />
                             </svg>
                             <h3 class="card__title">PARA TI</h3>
-                            <p class="card__description">Programas de bienestar personalizados con tecnología de avanzada</p>
+                            <p class="card__description">Programas de bienestar personalizados con tecnología de
+                                avanzada</p>
                             <button class="btn btn--secondary btn--white">Ver Programas</button>
                         </div>
                     </article>
 
-                    <article class="card card--clickable" data-scroll="hoteles">
-                        <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80');">
+                    <article class="card card--clickable" data-scroll="hoteles" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card__image"
+                            style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80');">
                             <div class="card__overlay"></div>
                         </div>
                         <div class="card__content">
                             <svg class="card__icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M8 38V18L24 8L40 18V38H28V26H20V38H8Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M8 38V18L24 8L40 18V38H28V26H20V38H8Z" stroke="white" stroke-width="2"
+                                    stroke-linejoin="round" />
                             </svg>
                             <h3 class="card__title">PARA HOTELES</h3>
-                            <p class="card__description">Spa móvil sin inversión. Mejorá la experiencia de tus huéspedes</p>
+                            <p class="card__description">Spa móvil sin inversión. Mejorá la experiencia de tus huéspedes
+                            </p>
                             <button class="btn btn--secondary btn--white">Conocer Más</button>
                         </div>
                     </article>
 
-                    <article class="card card--clickable" data-scroll="empresas">
-                        <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80');">
+                    <article class="card card--clickable" data-scroll="empresas" data-aos="zoom-in"
+                        data-aos-delay="300">
+                        <div class="card__image"
+                            style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80');">
                             <div class="card__overlay"></div>
                         </div>
                         <div class="card__content">
                             <svg class="card__icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M18 14H38M18 24H38M18 34H38M10 14H10.02M10 24H10.02M10 34H10.02" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M18 14H38M18 24H38M18 34H38M10 14H10.02M10 24H10.02M10 34H10.02" stroke="white"
+                                    stroke-width="2" stroke-linecap="round" />
                             </svg>
                             <h3 class="card__title">PARA EMPRESAS</h3>
                             <p class="card__description">Bienestar corporativo que mejora el clima laboral</p>
@@ -172,13 +205,13 @@
         </section>
 
         <!-- Sección Para Ti -->
-        <section class="para-ti section" id="para-ti">
+        <section class="para-ti section" id="para-ti" data-aos="fade-up">
             <div class="container">
                 <h2 class="section__title">Programas de Bienestar</h2>
                 <p class="section__subtitle">No vendemos sesiones sueltas. Diseñamos procesos que transforman.</p>
-                
+
                 <div class="programs-grid">
-                    <article class="program-card">
+                    <article class="program-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="program-card__header">
                             <h3 class="program-card__title">Post-Operatorio</h3>
                             <div class="program-card__duration">8 sesiones | 4 semanas</div>
@@ -193,7 +226,7 @@
                         <button class="btn btn--primary btn--full" data-modal="contacto">Consultar</button>
                     </article>
 
-                    <article class="program-card program-card--featured">
+                    <article class="program-card program-card--featured" data-aos="fade-up" data-aos-delay="200">
                         <div class="program-card__badge">Más Popular</div>
                         <div class="program-card__header">
                             <h3 class="program-card__title">Reductor Intensivo</h3>
@@ -209,7 +242,7 @@
                         <button class="btn btn--primary btn--full" data-modal="contacto">Consultar</button>
                     </article>
 
-                    <article class="program-card">
+                    <article class="program-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="program-card__header">
                             <h3 class="program-card__title">Piernas Ligeras</h3>
                             <div class="program-card__duration">4 sesiones | 2-4 semanas</div>
@@ -224,7 +257,7 @@
                         <button class="btn btn--primary btn--full" data-modal="contacto">Consultar</button>
                     </article>
 
-                    <article class="program-card">
+                    <article class="program-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="program-card__header">
                             <h3 class="program-card__title">Anti-Estrés</h3>
                             <div class="program-card__duration">6 sesiones | 6 semanas</div>
@@ -243,34 +276,34 @@
         </section>
 
         <!-- Sección Para Hoteles -->
-        <section class="hoteles section section--white" id="hoteles">
+        <section class="hoteles section section--white" id="hoteles" data-aos="fade-up">
             <div class="container">
                 <h2 class="section__title">Convertí tu Hotel en un Spa sin Invertir</h2>
                 <p class="section__subtitle">Sistema plug-and-play de bienestar para tus huéspedes</p>
-                
+
                 <div class="benefits-grid">
-                    <div class="benefit">
+                    <div class="benefit" data-aos="fade-right" data-aos-delay="100">
                         <div class="benefit__number">01</div>
                         <div>
                             <h3 class="benefit__title">Nuevo Ingreso</h3>
                             <p class="benefit__text">30% de comisión por cada servicio sin costos fijos</p>
                         </div>
                     </div>
-                    <div class="benefit">
+                    <div class="benefit" data-aos="fade-left" data-aos-delay="200">
                         <div class="benefit__number">02</div>
                         <div>
                             <h3 class="benefit__title">Mejores Reviews</h3>
                             <p class="benefit__text">Huéspedes mencionan bienestar, tu puntaje sube</p>
                         </div>
                     </div>
-                    <div class="benefit">
+                    <div class="benefit" data-aos="fade-right" data-aos-delay="300">
                         <div class="benefit__number">03</div>
                         <div>
                             <h3 class="benefit__title">Diferenciación</h3>
                             <p class="benefit__text">Competís con hoteles más grandes</p>
                         </div>
                     </div>
-                    <div class="benefit">
+                    <div class="benefit" data-aos="fade-left" data-aos-delay="400">
                         <div class="benefit__number">04</div>
                         <div>
                             <h3 class="benefit__title">Cero Complicaciones</h3>
@@ -282,13 +315,13 @@
         </section>
 
         <!-- Sección Para Empresas -->
-        <section class="empresas section" id="empresas">
+        <section class="empresas section" id="empresas" data-aos="fade-up">
             <div class="container">
                 <h2 class="section__title">Cuidá a tu Equipo sin Romper el Presupuesto</h2>
                 <p class="section__subtitle">Programas de bienestar que reducen estrés y mejoran el clima laboral</p>
-                
+
                 <div class="corporate-options">
-                    <article class="corporate-card">
+                    <article class="corporate-card" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="corporate-card__title">Día de Bienestar</h3>
                         <p class="corporate-card__desc">Evento único para equipos</p>
                         <div class="corporate-card__price">$8.000 <span>por empleado</span></div>
@@ -318,7 +351,7 @@
             <div class="container">
                 <h2 class="section__title">Formación Profesional con Salida Laboral Real</h2>
                 <p class="section__subtitle">No es solo aprender masaje. Es aprender a vivir del masaje.</p>
-                
+
                 <div class="course-info">
                     <h3>Masaje Hotelero Profesional</h3>
                     <p>2 días intensivos | Cupos limitados: 8 personas</p>
@@ -332,7 +365,7 @@
         <section class="contact section" id="contacto">
             <div class="container">
                 <h2 class="section__title">Contacto</h2>
-                
+
                 <div class="contact-grid">
                     <div class="contact-form-wrapper">
                         <h3>Envianos un Mensaje</h3>
@@ -398,10 +431,13 @@
             <div class="container">
                 <div class="cta-final__content">
                     <h2 class="cta-final__title">¿Lista para cuidarte en serio?</h2>
-                    <p class="cta-final__text">No vendemos sesiones sueltas. Diseñamos programas de bienestar personalizados.</p>
+                    <p class="cta-final__text">No vendemos sesiones sueltas. Diseñamos programas de bienestar
+                        personalizados.</p>
                     <div class="cta-final__buttons">
-                        <button class="btn btn--primary btn--large" data-modal="contacto">Reservar Evaluación Gratuita</button>
-                        <a href="https://wa.me/5493764XXXXXX" class="btn btn--secondary btn--large" target="_blank">Escribir por WhatsApp</a>
+                        <button class="btn btn--primary btn--large" data-modal="contacto">Reservar Evaluación
+                            Gratuita</button>
+                        <a href="https://wa.me/5493764XXXXXX" class="btn btn--secondary btn--large"
+                            target="_blank">Escribir por WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -449,9 +485,27 @@
         <div class="modal__content">
             <button class="modal__close" id="modalClose">×</button>
             <div class="modal__body" id="modalBody"></div>
-        </div>
-    </div>
+            <!-- Lead Magnet Modal (Marketing) -->
+            <div class="modal modal--marketing" id="leadMagnetModal">
+                <div class="modal__overlay" id="leadMagnetOverlay"></div>
+                <div class="modal__content modal__content--magnet">
+                    <button class="modal__close" id="leadMagnetClose">×</button>
+                    <div class="modal__body" id="leadMagnetBody">
+                        <!-- Se llena dinamicamente via JS -->
+                    </div>
+                </div>
+            </div>
 
-    <script src="script.js"></script>
+            <!-- Scripts -->
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100
+                });
+            </script>
+            <script src="script.js"></script>
 </body>
+
 </html>

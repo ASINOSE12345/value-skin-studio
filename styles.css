@@ -214,3 +214,49 @@ body { font-family: var(--font-body); font-size: 18px; line-height: 1.6; color: 
     .form-group select,
     .form-group textarea { font-size: 16px; }
 }
+
+/* Video Background Hero */
+.hero__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Marketing Lead Magnet Modal */
+.modal--marketing .modal__content--magnet {
+    max-width: 500px;
+    background: linear-gradient(135deg, var(--color-blanco), var(--color-crema));
+    border: 2px solid var(--color-oro);
+}
+.modal--marketing .modal__body {
+    padding: 60px 40px 40px;
+    text-align: center;
+}
+.modal--marketing h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--color-verde-selva);
+    margin-bottom: 8px;
+}
+.subtitle--magnet {
+    font-size: 16px;
+    color: var(--color-gris-piedra);
+    margin-bottom: 30px;
+}
+.magnet-reward {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e6f4ea;
+    border: 1px dashed var(--color-verde-selva);
+    border-radius: var(--radius-md);
+    color: var(--color-verde-selva-dark);
+    font-weight: 600;
+    display: none;
+}
+.magnet-reward.active {
+    display: block;
+}
