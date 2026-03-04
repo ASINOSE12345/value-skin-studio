@@ -1,4 +1,7 @@
-# Value Skin Studio - Sistema Completo
+# Value Skin Studio - SaaS & AI CRM
+
+> **Plataforma SaaS Integral para Centros de Estética y Bienestar, potenciada por Inteligencia Artificial.**
+> Incluye gestión de turnos automatizada, CRM de clientes, panel de administración completo y un Asistente Virtual Inteligente (IA) para atención 24/7 y agendamiento por WhatsApp/Web.
 
 ## 🎉 Sistema de Gestión Web con Backend Completo
 

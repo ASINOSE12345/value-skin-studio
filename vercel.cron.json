@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/v1/admin/whatsapp/process-reminders?secret=vss-cron-2024",
+      "schedule": "0 * * * *"
+    }
+  ]
+}

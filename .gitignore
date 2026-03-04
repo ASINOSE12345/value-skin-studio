@@ -1,0 +1,122 @@
+# =====================================================
+# VALUE SKIN STUDIO - GITIGNORE
+# =====================================================
+
+# =====================================================
+# DEPENDENCIAS
+# =====================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =====================================================
+# VARIABLES DE ENTORNO (NUNCA COMMITEAR)
+# =====================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# =====================================================
+# LOGS
+# =====================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =====================================================
+# SISTEMA OPERATIVO
+# =====================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# =====================================================
+# EDITORES E IDEs
+# =====================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# =====================================================
+# BUILD Y COMPILADOS
+# =====================================================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+*.tsbuildinfo
+
+# =====================================================
+# TESTING
+# =====================================================
+coverage/
+.nyc_output/
+test-results/
+*.lcov
+
+# =====================================================
+# ARCHIVOS TEMPORALES
+# =====================================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# =====================================================
+# UPLOADS Y ARCHIVOS GENERADOS
+# =====================================================
+uploads/
+public/uploads/
+*.uploaded
+
+# =====================================================
+# SECRETOS Y CREDENCIALES
+# =====================================================
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials/
+*.credentials
+serviceAccountKey.json
+
+# =====================================================
+# VERCEL
+# =====================================================
+.vercel/
+
+# =====================================================
+# DOCUMENTACION OBSOLETA (de otros proyectos)
+# =====================================================
+DAILY_CHECKLIST_AGENTES.md
+QUICK_START_72_HORAS.md
+RESUMEN_EJECUTIVO.md
+PLAN_IMPLEMENTACION.md
+PLAN_CRM_COMPLETO.md
+.vercel
